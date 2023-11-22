@@ -1,0 +1,4 @@
+export enum TradeType {
+  TEMPORALITY = 'TEMPORALITY',
+  LAST_TRADES = 'LAST_TRADES'
+}

@@ -1,0 +1,34 @@
+apiVersion: "apps/v1"
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: backend
+spec:
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          imagePullPolicy: Never
+          image: tycho-backend:latest
+          env: 
+            - name: SECRET_DB_LINK
+              valueFrom:
+                secretKeyRef:
+                  name: db-link
+                  key: link
+          # volumeMounts:
+          #   - name: secret-volume
+          #     mountPath: /etc/secret-volume
+          ports:
+          - containerPort: 5000
+      # volumes:
+      #   - name: secret-volume
+      #     secret:
+      #       secretName: db-link

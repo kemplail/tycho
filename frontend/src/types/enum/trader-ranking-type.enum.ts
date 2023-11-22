@@ -1,0 +1,5 @@
+export enum TraderRankingType {
+  BEST_WINRATE = 'BEST_WINRATE',
+  BEST_CUM_PROFIT = 'BEST_CUM_PROFIT',
+  BEST_AVG_PROFIT = 'BEST_AVG_PROFIT'
+}

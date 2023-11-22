@@ -1,0 +1,5 @@
+export enum FilterTraderClassementEnum {
+  BEST_CUM_PROFIT = 'BEST_CUM_PROFIT',
+  BEST_AVG_PROFIT = 'BEST_AVG_PROFIT',
+  BEST_WINRATE = 'BEST_WINRATE'
+}
